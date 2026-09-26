@@ -1,23 +1,68 @@
 aid: ariacv
+
 name: Ariacv
-description: 'Ariacv is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://broadviewventures.org/wp-content/uploads/2021/01/ariacv.jpg
+
+description: 'Aria CV, Inc. is developing a medical device to treat pulmonary hypertension, a life‑threatening disease with limited therapeutic options. The company aims to provide a less invasive, cost‑effective solution compared to expensive drug therapies, addressing a significant unmet medical need.'
+
 url: https://raw.githubusercontent.com/api-evangelist/ariacv/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- MedicalDevice
+- PulmonaryHypertension
+- Healthcare
+- Biotechnology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/ariacv-hosts.yml
+- type: Vendors
+  url: vendors/ariacv-vendors.yml
+- type: PrivacyPolicy
+  url: https://broadviewventures.org/privacy-policy/
+- type: Newsroom
+  url: https://broadviewventures.org/news/
+- type: Leadership
+  url: https://broadviewventures.org/team/
+- type: DomainSecurity
+  url: security/ariacv-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/ariacv
+  url: https://broadviewventures.org/portfolio/aria-cv/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract found on the API host.
+  evidence:
+    - url: https://api.broadviewventures.org/openapi.json
+      status: 0
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
